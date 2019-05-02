@@ -5,8 +5,8 @@
     align-content: @align-content;
 }
 
-.animate-header(@pulse, @second, @type) {
-    animation: @pulse @second @type;
+.animate-header(@type, @second, @iteration) {
+    animation: @type @second @iteration;
 }
 
 @keyframes pulse {
@@ -16,6 +16,16 @@
 
     50% {
         color: #FF4136;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
     }
 }
 

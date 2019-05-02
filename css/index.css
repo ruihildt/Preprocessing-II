@@ -135,6 +135,14 @@ table {
     color: #FF4136;
   }
 }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -196,7 +204,7 @@ header .navigation {
 }
 header .navigation h1 {
   padding: 2rem 0;
-  animation: pulse 5s infinite;
+  animation: spin 5s infinite;
 }
 header .navigation nav {
   display: flex;
