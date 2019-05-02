@@ -1,8 +1,14 @@
 // used in: header
-.displayFlexDir(@flex-dir) {
+.displayFlexDirCon(@flex-dir, @align-content) {
     display: flex;
     flex-direction: @flex-dir;
+    align-content: @align-content;
 }
+
+/* .displayFlexItem(@align-item) {
+    align-items: @align-item;
+} */
+
 
 // used on home-page
 .btn(@btn-font-size,@btn-padding, @btn-bord-rad) {
@@ -10,6 +16,7 @@
     color: white;
     text-align: center;
     font-weight: 600;
+    
     // Parameters
     font-size:@btn-font-size;
     border-radius: @btn-bord-rad;

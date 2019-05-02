@@ -2,16 +2,27 @@ header {
     border-bottom:2px dashed @navigation-border;
 
     .navigation {
-        padding: 2rem 0;
-
-        .displayFlexDir(row);
+        
+        .displayFlexDirCon(row, center);
         justify-content: space-between;
-
-        nav {
-            .displayFlexDir(row);
-            align-items: center;
+        align-items:center;
+        
+        @media @mobile {
+            .displayFlexDirCon(column, center);
+        }
+        
+        h1 {
+            padding: 2rem 0;            
         }
 
+        nav {
+            .displayFlexDirCon(row, center);
+            
+            @media @mobile {
+                padding-bottom: 2rem;
+            }
+        }
+        
         nav a {
             color: @shark;
             text-decoration: none;
