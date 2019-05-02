@@ -6,12 +6,29 @@
 }
 
 header {
-    .displayFlexDir(row);
-    justify-content: space-between;
+    border-bottom:2px dashed @silver;
 
-    nav ul{
+    .navigation {
+        padding: 2rem 0;
+
         .displayFlexDir(row);
-        align-items: baseline;
+        justify-content: space-between;
+
+        nav {
+            .displayFlexDir(row);
+            align-items: center;
+        }
+
+        nav a {
+            color: @shark;
+            text-decoration: none;
+            font-size: 1.6rem;
+            padding:0 2rem;
+
+            &:hover {
+                color:@eastern-blue;
+            }
+        }
     }
 
 }
