@@ -1,1 +1,17 @@
 // Navigation Styles here
+
+.displayFlexDir(@flex-dir) {
+    display: flex;
+    flex-direction: @flex-dir;
+}
+
+header {
+    .displayFlexDir(row);
+    justify-content: space-between;
+
+    nav ul{
+        .displayFlexDir(row);
+        align-items: baseline;
+    }
+
+}
