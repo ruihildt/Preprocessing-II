@@ -126,9 +126,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* .displayFlexItem(@align-item) {
-    align-items: @align-item;
-} */
+@keyframes pulse {
+  0%,
+  100 {
+    color: #001F3F;
+  }
+  50% {
+    color: #FF4136;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -190,6 +196,7 @@ header .navigation {
 }
 header .navigation h1 {
   padding: 2rem 0;
+  animation: pulse 5s infinite;
 }
 header .navigation nav {
   display: flex;
