@@ -1,1 +1,43 @@
-// Mixins in here
+// used in: header
+.displayFlexDirCon(@flex-dir, @align-content) {
+    display: flex;
+    flex-direction: @flex-dir;
+    align-content: @align-content;
+}
+
+.animate-header(@type, @second, @iteration) {
+    animation: @type @second @iteration;
+}
+
+@keyframes pulse {
+    0%, 100 {
+        color: #001F3F;
+    }
+
+    50% {
+        color: #FF4136;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// used on home-page
+.btn(@btn-font-size,@btn-padding, @btn-bord-rad) {
+    background-color: @button-bg;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    
+    // Parameters
+    font-size:@btn-font-size;
+    border-radius: @btn-bord-rad;
+    padding: @btn-padding;
+}
